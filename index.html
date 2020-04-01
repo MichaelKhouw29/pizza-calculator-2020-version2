@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript" src="js/logic.js"></script>
+</head>
+<body>
+<ul id="pizza-list">
+
+</ul>
+</body>
+</html>
+
+<script>
+
+pizzaData = [
+	{name: 'Margherita', price: 650},
+	{name: 'Siciliana', price:870}
+
+
+
+
+]
+
+
+function fillPizzaList(){
+	for (let p = 0; p < pizzaData.length; p++){
+
+		let pizzaRow = document.createElement('LI');
+
+
+		document.getElementById('pizza-list').append(pizzaRow);
+	}
+
+
+
+}
+
+
+fillPizzaList();
+
+
+</script>
