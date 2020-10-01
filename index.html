@@ -1,16 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 <head>
 	<meta charset="utf-8">
 	<title></title>
-	<script type="text/javascript" src="js/logic.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/w3.css">
+	<script type="text/javascript" ></script>
 </head>
 <body>
 <ul id="pizza-list">
-	<li id="pizza0">
-		<span class="pizza-name">Vulcana</span><span class="pizza-price">1230</span>
-	</li>
-
 </ul>
 </body>
 </html>
@@ -18,44 +15,31 @@
 <script>
 
 	var pizzas = [
-		{name: 'Margherita'},
-		{name: 'Siciliana'},
-		{name: 'Napoletana'},
-		{name: 'Salami'}
+		{name: 'Margherita', price: 6, img:"margherita.jpg"},
+		{name: 'Siciliana', price: 8, img:"siciliana.jpg"},
+		{name: 'Napoletana', price: 7, img:"napoletana.jpg"},
+		{name: 'Salami', price: 7, img:"salami.jpg"},
+		{name: 'Diabolo', price: 9, img:"diabolo.jpg"}
 	];
+
 
 	function addPizza(){
 		
 		for (p = 0; p < pizzas.length; p++){
+			/*console.log(pizzas[p].name + ' kost ' + pizzas[p].price);*/
 			var pizzaElement = document.createElement('LI');
-			pizzaElement.innerHTML = pizzas[0].name;
-			document.getElementById('pizza-list').appendChild(pizzaElement);	
-		}
+			pizzaElement.innerHTML = pizzas[p].name + ' kost €' + pizzas[p].price + '<img src="img/'+ pizzas[p].img +'">';
+			document.getElementById('pizza-list').appendChild(pizzaElement);
+		};
 
 		
 	};
 
 	addPizza();
 
-pizzaData = [
-	{name: 'Margherita', price: 650},
-	{name: 'Siciliana', price: 870},
-	{name: 'Napoletana', price: 740},
-	{name: 'Salami', price: 700}
-];
 
-function fillPizzaList(){
-	for (let p = 0; p < pizzaData.length; p++){
 
-		let pizzaRow = document.createElement('LI');
 
-		
 
-		document.getElementById('pizza-list').append(pizzaRow);
-	}
-
-}
-
-fillPizzaList();
 
 </script>
